@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html,
+body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    /* background-color: #69869a; */
+    background-color: bisque;
+
+}
+#main {
+    /* background-color: #000; */
+    position: relative;
+    z-index: 10;
+}
+
+#page1{
+    z-index: 5;
+}
+
+
+nav {
+    padding: 2vw 1vw;
+    margin-bottom: 70px;
+    width: 100%;
+    background-color: #facfac;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    justify-content: space-between;
+}
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#nav-part2 h4 {
+    padding: 10px 20px;
+    border: 1px solid #0000003c;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000bb;
+    transition: all ease 0.4s;
+    position: relative;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+#nav-part2 h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+#nav-part2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+#nav-part2 h4 a {
+    color: #000000bb;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+
+
+#nav-part2 h4:hover a {
+    color: #fff;
+}
+
+#page2{
+    /* width: 1000px; */
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.carousel {
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px;
+}
+
+
+#sectionOne{
+    height: 100vh;
+    width: 100%;
+    /* background-color: greenyellow; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#sectionOne h1{
+    font-size: 300px;
+    font-weight: 600;
+    text-wrap: nowrap;
+}
+
+#sectionTwo{
+    height: 100vh;
+    width: 100%;
+}
+#cardHeading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 300px;
+    font-weight: bolder;
+    height: 10%;
+}
+.cards{
+    height: 90%;
+    width: 100%;
+    /* background-color: red; */
+    z-index: 5;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: bisque;
+    padding:  4vw 0; 
+}
+
+.elem{
+    height: 130px;
+    width: 100%;
+    position: relative;
+    /* background-color: orange; */
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    overflow: hidden;
+}
+.elem h2{
+    font-size: 3vw;
+    z-index: 9;
+}
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #fe670a;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.3s;
+}
+.elem:hover .overlay{
+    top: 0;
+}
+
+
+#fixed-image {
+    height: 30vw;
+    width: 24vw;
+    /* background-color: red; */
+    border-radius: 15px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,32 @@
+gsap.to("#sectionOne h1",{
+    transform:"translateX(-60%)",
+    scrollTrigger:{
+        trigger:"#sectionOne",
+        scroller:"body",
+        // markers:true,
+        start:"top 0%",
+        end:"top -100%",
+        scrub:4,
+        pin:true
+    }
+})
+
+
+var elemc = document.querySelector("#elem-container")
+var fixed = document.querySelector("#fixed-image")
+
+elemc.addEventListener("mouseenter", function(){
+fixed.style.display = "block"
+})
+
+elemc.addEventListener("mouseleave",function(){
+fixed.style.display = "none"
+})
+
+var elems = document.querySelectorAll(".elem")
+    elems.forEach(function(e){
+    e.addEventListener("mouseenter", function(){
+    var image = e.getAttribute("data-image")
+    fixed.style.backgroundImage = `url(${image})`
+    })
+    })
